@@ -6,7 +6,7 @@
 </head>
 
 
-<body>
+<body background="img/backgr.jpg">
 
 
 
@@ -33,7 +33,7 @@
 <li><a href="#Second_Point_Header">2 Guides for configuring environment</a>
  <ul>
     <li><a href="#adminPriv">2.1 Temporary Admin Privileges</a></li>
-    <li><a href="#execlass">2.1 </a></li>
+    <li><a href="#echoPath">2.1 Adding a new Path variable to environments for Scripts</a></li>
         <li><a href="#importLibrary">2.2 </a></li>
     <li><a href="#javaDoc">2.2 </a></li>
     <li><a href="#First_Sub_Point_2">2.3 </a></li>
@@ -172,22 +172,22 @@
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>ctrl+C</td>
+  <td>KILL COMMAND</td>
+  <td>killall programName</td>
+  <td>terminates program and ALL processes related to program</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>free -h</td>
+  <td>Shows RAM used/free</td>
+  <td>watch CommandName</td>
+  <td>Periodically re-executes command and shows output</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
+  <td>ctrl+l</td>
+  <td>Clear screen.Cleanup</td>
   <td></td>
   <td></td>
   </tr>
@@ -213,12 +213,21 @@
 Alot of manuals use "sudo s" but remaining active means you can get hacked. Thus, for ubuntu
 it is better to use ""sudo -s" which gives temporary access on a TIMER(which linux decides). It is useful as sometimes
 need to perform many restricted tasks but need to avoid being asked our password each time.
-TYPE EXIT to manually disable temporary admin</p><br><br>
+TYPE EXIT to manually disable temporary admin</p><br>
 
-<p id=ls-l><b><u>Verifying file permission</u></b><br><br>
+<p id=ls-l><b><u>Verifying file permission</u></b><br>
 <img src="img/ls-l.jpg" >
 <p> in this example(r=read,w=write)....<br> -rw:Permission of owner file   -r: permission of group<br>-r: everybody else
-last two columns are name of owner and name of group (both are flare) </p>
+last two columns are name of owner and name of group (both are flare) </p><br><br>
+
+<p id=echoPATH><b><u>Changing PATH for Scripts</u></b><br>
+<img src="img/echoPath.jpg" >
+<p> NOTE 1) the image shows paths in order that the system searches<br>
+         2)when entering command to execute a script (i.e  ./ ScritName  ), the "./" You want to create
+your own personal bin folder. This removes the need to enter "./" in terminal. MORE IMPORTANTLY,
+you do not want to execute scripts from your CURRENT dir(note / denotes current dir)
+as hackers can slip malware in the current directory which could have the same name as a regular
+command. </p><br>
 
 </body>
 </html>

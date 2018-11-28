@@ -208,7 +208,17 @@
   
 </table>
 
-<p><b>Gaining Temporary Admin Privileges</b><nl></p>
+<p id="adminPriv"><b><u>Gaining Temporary Admin Privileges</b></u><br> </p>
+<p>If you install ubuntu and you do not have a root account setup. Chances are you have a sudu account setup.
+Alot of manuals use "sudo s" but remaining active means you can get hacked. Thus, for ubuntu
+it is better to use ""sudo -s" which gives temporary access on a TIMER(which linux decides). It is useful as sometimes
+need to perform many restricted tasks but need to avoid being asked our password each time.
+TYPE EXIT to manually disable temporary admin</p><br><br>
+
+<p id=ls-l><b><u>Verifying file permission</u></b><br><br>
+<img src="img/ls-l.jpg" >
+<p> in this example(r=read,w=write)....<br> -rw:Permission of owner file   -r: permission of group<br>-r: everybody else
+last two columns are name of owner and name of group (both are flare) </p>
 
 </body>
 </html>

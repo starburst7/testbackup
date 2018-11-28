@@ -32,10 +32,10 @@
 
 <li><a href="#Second_Point_Header">2 Guides for configuring environment</a>
  <ul>
-    <li><a href="#execjar1">2.1 Executing Jars</a></li>
-    <li><a href="#execlass">2.1 Executing class files</a></li>
-        <li><a href="#importLibrary">2.2 Importing libraries</a></li>
-    <li><a href="#javaDoc">2.2 Accessing Java API documentation within Eclipse</a></li>
+    <li><a href="#adminPriv">2.1 Temporary Admin Privileges</a></li>
+    <li><a href="#execlass">2.1 </a></li>
+        <li><a href="#importLibrary">2.2 </a></li>
+    <li><a href="#javaDoc">2.2 </a></li>
     <li><a href="#First_Sub_Point_2">2.3 </a></li>
      <li><a href="#First_Sub_Point_2">2.4 </a></li>
       <li><a href="#First_Sub_Point_2">2.5 </a></li>
@@ -96,9 +96,9 @@
   <tr>
     
     <td>ls flare/joe/</td>
-    <td>relative path(pwd=home)</td>
+    <td>lists all files&dir via relative path(pwd=home)</td>
     <td>ls -a</td>
-    <td>all files,includes hidden</td>
+    <td>LiSts all files,includes hidden</td>
    
         
    
@@ -107,58 +107,108 @@
     <td>sudo updatedb</td>
     <td>updates db for locate command</td>
     <td>locate filename(without extension)</td>
-    <td>finds full path</td>
+    <td>finds full path of a file</td>
     
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>whatis programName</td>
+    <td>tells you what it does</td>
+    <td>apropos topic</td>
+    <td>lists software with related topic</td>
     
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>man man</td>
+    <td>lists manuals for all commands</td>
+    <td>man commandName</td>
+    <td>manual for given command</td>
+    
+  </tr>
+  
+   <tr>
+    <td>mkdir dirName</td>
+    <td>create directory</td>
+    <td>touch newFileName</td>
+    <td>creates generic file</td>
+    
+  </tr>
+  
+   <tr>
+    <td>mv file1 file2</td>
+    <td>move content's of file1 into file2(file2 data replaced)</td>
+    <td>rm fileName*</td>delete ALL files containing fileName EVEN PARTIALLY 
+    <td>rm -r dirName </td>delete Directory & it's files (-r recursive) 
+    
+  </tr>
+  
+   <tr>
+    <td>rmdir dirName</td>
+    <td>remove directory ONLY if it's empty</td>
     <td></td>
     <td></td>
     
   </tr>
   
    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>cat fileName</td>
+    <td>reads content of text files(remember: all linux files are text and have no extension)</td>
+    <td>cat >>fileName</td>
+    <td>>> allows you to CONCATENATE text(appends) but just > will replace file. Control+D to flush</td>
     
   </tr>
   
-   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
+  <tr>
+  <td>more fileName</td>
+  <td>allows to view text file page by page</td>
+  <td>less fileName</td>
+  <td>improved version of more command (search with text,line b line etc)</td>
   </tr>
   
-   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
+  <tr>
+  <td>nano fileName</td>
+  <td>Edit text files. (legend: ^x means ctrl+x)</td>
+  <td>ls -al / >fileName</td>
+  <td>list all files+dir IN ROOT(/) & redirect to file</td>
   </tr>
   
-   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
   </tr>
   
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+  
+  <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+  
+    <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+  
+    <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
   
 </table>
+
+<p><b>Gaining Temporary Admin Privileges</b><nl></p>
 
 </body>
 </html>

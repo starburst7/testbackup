@@ -22,7 +22,7 @@
   <ul>
     <li><a href="#Terminal">1.1 Terminal</a></li>
     <li><a href="#HotkeyTable">1.2 Bash Shell</a></li>
-     <li><a href="#PrimTable">1.3 </a></li>
+     <li><a href="#PrimTable">1.3 Syntax </a></li>
       <li><a href="#PrimTable">1.4 </a></li>
        <li><a href="#PrimTable">1.5 </a></li>
         <li><a href="#PrimTable">1.6 </a></li>
@@ -188,8 +188,8 @@
   <tr>
   <td>ctrl+l</td>
   <td>Clear screen.Cleanup</td>
-  <td></td>
-  <td></td>
+  <td>echo</td>
+  <td>print line</td>
   </tr>
   
     <tr>
@@ -224,10 +224,16 @@ last two columns are name of owner and name of group (both are flare) </p><br><b
 <img src="img/echoPath.jpg" >
 <p> NOTE 1) the image shows paths in order that the system searches<br>
          2)when entering command to execute a script (i.e  ./ ScritName  ), the "./" You want to create
-your own personal bin folder. This removes the need to enter "./" in terminal. MORE IMPORTANTLY,
+your own personal bin folder(Linux will automatically remember it. You don't need to do anything). This removes the need to enter "./" in terminal. MORE IMPORTANTLY,
 you do not want to execute scripts from your CURRENT dir(note / denotes current dir)
 as hackers can slip malware in the current directory which could have the same name as a regular
-command. </p><br>
+command. Keep in mind that placing this script in this bin will ONLY be usable by you.
+3) to create script that is executable for other users on the computer, then place this in /usr/local/bin </p><br>
+
+<p id="Syntax"><b>Syntax</b></u><br> </p>
+<p>Declaration&initialization: aVar=dog<br> print: echo $aVar<br>  output:dog</td></tr><br>
+declaration&initialization from command stm:  aVar=$(date)<br>  print: echo $aVar<br> output:Wed, Aug 9 12:46:00 EDT 2018<br>
+</p>
 
 </body>
 </html>

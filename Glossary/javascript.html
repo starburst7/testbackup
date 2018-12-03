@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="main.css">
 <meta charset="ISO-8859-1">
+
 <title>Index</title>
 </head>
 
@@ -11,25 +13,25 @@
 
 
 
-<div style="text-align:center">
-<h1>Java Glossary</h1></div>
+
+<h1>Java Glossary</h1>
 
 
-<div id="toc_container">
+<div class="toc_container">
 <p class="toc_title">Contents</p>
 <ul class="toc_list">
   <li><a href="#First_Point_Header">1 HTML Javascript basics</a>
   <ul>
     <li><a href="#SemElements">1.1 Primary Semantic Elements </a></li>
     <li><a href="#attrib">1.2 Attributes </a></li>
-     <li><a href="#style">1.3 Styles</a></li>
-      <li><a href="#span-div">1.4 span and div Elements </a></li>
-       <li><a href="#scriptlink">1.5 linking script inside HTML </a></li>
-         <li><a href="#relaOper">1.6 Relational operators</a></li>
-         <li><a href="#textBox">1.7 Textbox object</a></li>
-         
-     
-         
+     <li><a href="#styles">1.3 Styles</a></li>
+     <li><a href="#span-div">1.4 span and div Elements </a></li>
+     <li><a href="#scriptlink">1.5 linking script inside HTML </a></li>
+     <li><a href="#relaOper">1.6 Relational operators</a></li>
+      <li><a href="#textBox">1.7 Textbox object</a></li>
+      <li><a href="#Date">1.7 Date object</a></li>
+      <li><a href="#functions">1.8 Functions (declaration vs expressions)</a></li>
+      <li><a href="#strictmode">1.9 Local Variables(using strict mode)</a></li>   
   </ul>
 </li>
 
@@ -64,7 +66,7 @@
 </ul>
 </div>
 
-
+<div class="hotkey_container">
 <table id="HotkeyTable">
   <tr>
     <th></th>
@@ -102,22 +104,35 @@
     
   </tr>
 </table>
+</div>
 
 
-<img src="img/elements.jpg"   id="SemElements" >
-<img src="img/attributes.jpg"   id="attrib">
-<img src="img/styles.jpg"   id="styles">
-<img src="img/span&div.jpg"   id="span-div">
-<img src="img/scriptlink.jpg"   id="scriptlink">
-<img src="img/parseIntFloat.jpg"   id="parseIntFloat">
-<img src="img/writeln.jpg"   id="writeln">
-<img src="img/relaOper.jpg"   id="relaOper">
-<img src="img/relaOper2.jpg"   id="relaOper2">
-<img src="img/toFixed.jpg"   id="toFixed">
-<img src="img/textbox.jpg"   id="textbox">
-<p>Executing Jar</p>
+<img src="img/elements.jpg"   id="SemElements" ><br>
+<img src="img/attributes.jpg"   id="attrib"><br>
+<img src="img/styles.jpg"   id="styles"><br>
+<img src="img/span&div.jpg"   id="span-div"><br>
+<img src="img/scriptlink.jpg"   id="scriptlink"><br>
+<img src="img/parseIntFloat.jpg"   id="parseIntFloat"><br>
+<img src="img/writeln.jpg"   id="writeln"><br>
+<img src="img/relaOper.jpg"   id="relaOper"><br>
+<img src="img/relaOper2.jpg"   id="relaOper2"><br>
+<img src="img/toFixed.jpg"   id="toFixed"><br>
+<img src="img/textbox.jpg"   id="textbox"><br>
+<img src="img/date.jpg" id="date"><br>
+<img src="img/functions.jpg" id=functions><br>
 
+<h2>Using Stric Mode to prevent accidental Global variable</h2>
 
+<p id="strictmode"> Insert at top of JS file. purpose : throw an error if you accidentally
+forget to add "var" identifier(thus making a variable global by accident)
+Avoid naming conflicts for large programs.</p>
+
+<h2>Best Coding practice for working with local and global variables</h2>
+<p>
+1. Use local variables whenever possible<br>
+2. always use strict mode<br>
+3. declare the variables that are used by a function at the start of function before you use them.
+</p>
 
 </body>
 </html>

@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+
+div.toc_container {
+	
+	
+	font-size: 1.1em;
+	font-style: normal;
+	text-decoration: none;
+	
+}
+
+div.hotkey_container{
+	font-size: 1.1em;
+	font-style: normal;
+	text-decoration: none;
+	
+}
+
+h1 {
+	
+	
+	font-size: 1.5em;
+	font-style: normal;
+	text-decoration: underline;
+	text-align:center
+}
+
+h2{
+    font-size: 1.35em;
+	font-style: none;
+	text-decoration: underline;	
+	
+}
+
+
+p.toc_title{
+	
+	font-size: 1.25em;
+	font-style: none;
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.15em;
+	font-style: none;
+	text-decoration: none;
+
+}
+
+body {
+	
+	font-size: 1.15em;
+	font-style: none;
+	text-decoration: none;
+
+
+}

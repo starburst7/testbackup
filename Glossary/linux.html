@@ -225,71 +225,73 @@
   </tr>
   
     <tr>
-  <td>unzip a file to destination dir</td>
   <td>unzip fileName.zip -d destination_folder</td>
-  <td>unzip file to current dir</td>
+  <td>unzip a file to a destination dir</td>
   <td>unzip fileName.zip</td>
+  <td>unzip file to current dir</td>
+
   </tr>
   
     <tr>
-  <td>change file to executable</td>
   <td>chmod u+x fileName</td>
+  <td>change file to executable</td>
+  <td>ps aux </td>
   <td>Show all running running processes </td>
-  <td>ps aux</td>
+ 
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>sudo apt-get install applicationName</td>
+  <td>go fetch from generic linux repositories and install an application</td>
+  <td>sudo apt-get remove applicationName</td>
+  <td>uninstall a given application</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>sudo apt-get upgrade</td>
+  <td>Check for upgrades for all software in system</td>
+  <td>top</td>
+  <td>Linux's task manager to kill a process(once there, press h for all top commands)</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>shutdown</td>
+  <td>shut down computer</td>
+  <td>reboot</td>
+  <td>reboots computer</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>netstat -vatn</td>
+  <td>listen to established  open ports and established TCP connections</td>
+  <td>netstat -vaun</td>
+  <td>display only open UDP ports try the following command:</td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  </tr>
-  
-  <tr>
-  <td></td>
-  <td></td>
+  <td>nmap ipaddress</td>
+  <td>will list OPEN ports</td>
   <td></td>
   <td></td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td>sudo afw enable/disable</td>
+  <td>enable or disable firewall</td>
+  <td>sudo ufw app list</td>
+  <td>shows apps that have been given a rule  </td>
   </tr>
   
   <tr>
-  <td></td>
-  <td></td>
+  <td>sudo ufw status</td>
+  <td>shows Firewall rules for Applist</td>
+  <td>sudo ufw deny/allow appFromAPPLIST(OR PORT NUMBER)</td>
+  <td>allow or deny specific App or Port #</td>
+  </tr>
+  
+  <tr>
+  <td>sudo ufw allow/deny from IPADDRESS</td>
+  <td>allow/deny traffic from IP address</td>
   <td></td>
   <td></td>
   </tr>
@@ -322,6 +324,9 @@ command. Keep in mind that placing this script in this bin will ONLY be usable b
 <p>Declaration&initialization: aVar=dog<br> print: echo $aVar<br>  output:dog</td></tr><br>
 declaration&initialization from command stm:  aVar=$(date)<br>  print: echo $aVar<br> output:Wed, Aug 9 12:46:00 EDT 2018<br>
 </p>
+
+<p id="network_config"><b><u>Network/Server</b></u><br>
+sudo/etc/init.d/networking restart   =>restarts network. Do this when changing network config
 
 </body>
 </html>

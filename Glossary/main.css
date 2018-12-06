@@ -9,12 +9,13 @@ div.toc_container {
 	
 }
 
+
 div.hotkey_container{
 	font-size: 1.1em;
 	font-style: normal;
-	text-decoration: none;
-	
+	text-decoration: none;	
 }
+
 
 h1 {
 	
@@ -26,6 +27,7 @@ h1 {
 }
 
 h2{
+	
     font-size: 1.35em;
 	font-style: none;
 	text-decoration: underline;	

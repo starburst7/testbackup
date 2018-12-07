@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="styles/Main.css">
 <meta charset="ISO-8859-1">
 <title>Linux</title>
 </head>
@@ -23,6 +24,7 @@
     <li><a href="#Terminal">1.1 Terminal</a></li>
     <li><a href="#HotkeyTable">1.2 Bash Shell</a></li>
      <li><a href="#PrimTable">1.3 Syntax </a></li>
+     <li><a href="#wildcards">1.4 Wildcards</a></li>
       <li><a href="#PrimTable">1.4 </a></li>
        <li><a href="#PrimTable">1.5 </a></li>
         <li><a href="#PrimTable">1.6 </a></li>
@@ -271,8 +273,8 @@
   <tr>
   <td>nmap ipaddress</td>
   <td>will list OPEN ports</td>
-  <td></td>
-  <td></td>
+  <td>file FileName</td>
+  <td>determine file type</td>
   </tr>
   
   <tr>
@@ -292,25 +294,68 @@
   <tr>
   <td>sudo ufw allow/deny from IPADDRESS</td>
   <td>allow/deny traffic from IP address</td>
-  <td></td>
-  <td></td>
+  <td>ls /ParentDir </td>
+  <td>lists parent without moving to it.</td>
   </tr>
   
-</table>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 
-<p id="adminPriv"><b><u>Gaining Temporary Admin Privileges</b></u><br> </p>
+  
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type COMMAND</td>
+<td>Display a command's type. Identify command type:
+-executable binaries(java/c++) or scripting languages, shell builtins(i.e cd), mini shell scripts from environment, alias(command combinations)</td>
+<td></td>
+<td></td>
+</tr>
+  
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+  
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+  
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table><br><br><br>
+
+<h2 id="adminPriv">Gaining Temporary Admin Privileges </p></h2>
 <p>If you install ubuntu and you do not have a root account setup. Chances are you have a sudu account setup.
 Alot of manuals use "sudo s" but remaining active means you can get hacked. Thus, for ubuntu
 it is better to use ""sudo -s" which gives temporary access on a TIMER(which linux decides). It is useful as sometimes
 need to perform many restricted tasks but need to avoid being asked our password each time.
 TYPE EXIT to manually disable temporary admin</p><br>
 
-<p id=ls-l><b><u>Verifying file permission</u></b><br>
+<h2 id=ls-l>Verifying file permission<br></h2>
 <img src="img/ls-l.jpg" >
 <p> in this example(r=read,w=write)....<br> -rw:Permission of owner file   -r: permission of group<br>-r: everybody else
 last two columns are name of owner and name of group (both are flare) </p><br><br>
 
-<p id=echoPATH><b><u>Changing PATH for Scripts</u></b><br>
+<h2 id=echoPATH>Changing PATH for Scripts<br></h2>
 <img src="img/echoPath.jpg" >
 <p> NOTE 1) the image shows paths in order that the system searches<br>
          2)when entering command to execute a script (i.e  ./ ScritName  ), the "./" You want to create
@@ -320,13 +365,16 @@ as hackers can slip malware in the current directory which could have the same n
 command. Keep in mind that placing this script in this bin will ONLY be usable by you.
 3) to create script that is executable for other users on the computer, then place this in /usr/local/bin </p><br>
 
-<p id="Syntax"><b>Syntax</b></u><br> </p>
+<h2 id="Syntax">Syntax</h2>
 <p>Declaration&initialization: aVar=dog<br> print: echo $aVar<br>  output:dog</td></tr><br>
 declaration&initialization from command stm:  aVar=$(date)<br>  print: echo $aVar<br> output:Wed, Aug 9 12:46:00 EDT 2018<br>
-</p>
+</p><br>
 
-<p id="network_config"><b><u>Network/Server</b></u><br>
-sudo/etc/init.d/networking restart   =>restarts network. Do this when changing network config
+<h2 id="network_config">Network/Server</h2>
+sudo/etc/init.d/networking restart   =>restarts network. Do this when changing network config<br><br><br>
+
+<h2 id=wildcards>Wildcards</h2>
+<img src="img/linux/wildcards.jpg" >
 
 </body>
 </html>

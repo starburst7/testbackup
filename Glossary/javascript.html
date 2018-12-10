@@ -25,7 +25,7 @@
     <li><a href="#Dom">1.3 The DOM </a></li>
     
      <li><a href="#Css styles">1.4 Styles</a>
-     <ul><li><a href="#selectors">1.4.1 Selectors</a></li></ul></li>
+     <ul><li><a href="#selectors">1.4.1 Selectors in CSS</a></li></ul></li>
      
      <li><a href="#span-div">1.5 span and div Elements </a></li>
      <li><a href="#scriptlink">1.6 Scripts </a></li>
@@ -33,7 +33,11 @@
       <li><a href="#functions">1.8 Functions (declaration vs expressions)</a></li>
       <li><a href="#strictmode">1.9 Pitfall: Global Variables. Use Strict mode</a></li> 
      <li><a href="#event">1.10 Events</a></li>  
-     <li><a href="#email_form">1.11 Form Templates</a>  
+     <li><a href="#form">1.11 Forms</a>
+     <ul>
+     <li><a href="#textbox_textarea">1.11.1 Controls: TextArea,Textbox</a></li> 
+      <li><a href="#radio_checkbox">1.12.2 Controls: Radio buttons, Select Menu, Checkboxes</a></li>
+      </ul>
  <br><br> </ul>
 </li>
 
@@ -166,67 +170,83 @@ tax= tax.toFixed(2);
 4. If there are numerous functions, each function should only calls functions that precede it in the code(logical ordering)
 <br><br></p>
 
-
+<img src="img/form2.jpg" id=form>
 <h1>Template for Forms</h1>
 <h2>Please join our email list</h2>
-        <form id="email_form" name="email_form" action="C:\Users\2flare\Desktop\Workspace\book_apps\ch04\email_list\join.html" method="get">
-            <label for="email_address1">Email Address:</label>
-            <input type="text" id="email_address1" name="email_address1"><br>
+        <h2>Register for an Account</h2>
+<body>
 
-            <label for="email_address2">Re-enter Email Address:</label>
-            <input type="text" id="email_address2" name="email_address2"><br>
+<form id="emailForm" name="emailForm" action="C:\Users\2flare\Desktop\Workspace\register\success.html" method="get">
 
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name"><br>
+<label for="email">E-mail: </label> 
+<input type="text" id="email_field" name="email_field"><span>*</span><br>
+<label for="mobileNb">Mobile Phone:</label> <input type="text" id=mobileNb_field>
+<span>*</span><br>
 
-            <label>&nbsp;</label>
-            Subscribe now: <input type="button" id="join_list" value="Join"><br> 
-            <label for="Clear Fields">Clear Fields: </label>
-            <input type="button" id="clearFields" value="Clear"><br>
-  </form>
-  <script>var $ = function(id) {
-	    return document.getElementById(id);
-  };
+<label for="country">Country: </label> 
+<select name="country" id="country">
+<option value="Please Select one: "></option>
+<option value="Canada">Canada</option>
+<option value="USA">USA</option>
+<option value="Mexico">Mexico</option>
+</select><span>*</span><br>
 
-  var validEmail=function(){
-  	
-  	var email1 = $("email_address1").value;
-  	var email2 = $("email_address2").value;
-  	var firstName = $("first_name").value;
+<label for="contactBy">Contact me by: </label> 
+<input type="radio" name=contact id="text" value="text" checked>Text
+<input type="radio" name=contact id="email" value="email" checked>Email
+<input type="radio" name=contact id="NAcontact" value="text">Don't Contact me<br>
 
-  	if( email1 != email2 )  {
-  		alert("Error: e-mail's must match");
-  		$("email_address1").focus;
-  	}
-  	
-  	else if ( (email1 =="") || (email2=="") || (firstName=="") )	{
-  		alert("Error: You must fill in the blanks");
-  		$("email_address1").focus;
-  	}
-  		
-  	else {
-  		$("email_form").submit();	
-  	};
+<label>Terms of service: </label>
+<input type="checkbox" name="terms" id="terms" >I accept<span>*</span><br>
 
-  }
+<input type="button" id="register" value="Register">
+<input type="button" id="reset" value="Reset">
 
-  	window.onload = function() {
-  	    $("join_list").onclick = validEmail; 
-  	  $("clearFields").onclick = clearing; 
-  	$("email_address1").focus;
-  	};
-  	
-  	var clearing= function() {
-  		
-  		$("email_address1").value="";
-  		$("email_address2").value="";
-  		$("first_name").value="";
-  			
-  	}
+</form>
+  <script>
   
+  var $ = function(id){
+	  return document.getElementById(id);
+  }
+  
+  var validateInputs= function() {
+		
+		var msg="missing: \n";
+		
+		var userEmail= $("email_field").value;
+		if(userEmail=="") 
+			msg +="-email\n"
+
+		var userNb= $("mobileNb_field").value;
+		if(userNb=="")  
+			msg +="-mobile number \n"
+
+		var userCountry= $("country").value;
+		if(userCountry=="Please Select one: ")  
+			msg +="-country\n"
+				
+		var tosInput= $("terms");
+		if(tosInput.checked==false)
+			msg+="-You must accept Terms of service";
+		
+		if(msg!="missing: \n")
+			alert(msg);
+		
+		else 
+			$(emailForm).submit();
+		
+		
+	}
+
+  window.onload = function() {
+		 $("register").onclick=validateInputs;
+		 }
   	</script> 
   	
   	<br><br><br>
+  	
+  	<img src="img/textbox_textarea.jpg" id=textbox_textarea><br>
+  	<img src="img/radio_checkbox.jpg" id=radio_checkbox><br><br><br><br>
   
   	<img src="img/domNodes.jpg" id=domNodes><br><br><br><br>
   	 <img src="img/elemNodes.jpg" id=elemNodes><br><br><br><br>     

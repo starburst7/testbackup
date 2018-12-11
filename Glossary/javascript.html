@@ -200,16 +200,19 @@ tax= tax.toFixed(2);
 <input type="checkbox" name="terms" id="terms" >I accept<span>*</span><br>
 
 <input type="button" id="register" value="Register">
-<input type="button" id="reset" value="Reset">
+<input type="reset" id="reset" value="Reset">
 
 </form>
   <script>
   
-  var $ = function(id){
-	  return document.getElementById(id);
-  }
-  
-  var validateInputs= function() {
+  var $=function(id){
+		
+		return document.getElementById(id);
+	}
+
+
+
+	var validateInputs= function() {
 		
 		var msg="missing: \n";
 		
@@ -233,14 +236,16 @@ tax= tax.toFixed(2);
 			alert(msg);
 		
 		else 
-			$(emailForm).submit();
+			$("emailForm").submit();
+		
 		
 		
 	}
 
-  window.onload = function() {
+	window.onload = function() {
 		 $("register").onclick=validateInputs;
 		 }
+	
   	</script> 
   	
   	<br><br><br>

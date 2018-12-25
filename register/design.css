@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+h1 {
+	font-size: 1.3em;
+}
+
+
+
+h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: blue;
+}
+
+
+
+form {
+	font-size: 1.20em;
+
+}
+
+
+#emailForm span {
+	font-size: 0.75em;
+	color: red
+}
+
+
+
+
+	
+	
+	

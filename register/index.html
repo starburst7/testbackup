@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="design.css">
+<script src="registerScript.js"></script>
+<meta charset="ISO-8859-1">
+<title>How to Script the Dom</title>
+
+</head>
+<h1>The Register application in a browser Account</h1>
+
+<h2>Register for an Account</h2>
+<body>
+
+<form id="emailForm" name="emailForm" action="file:///C:/Users/2flare/Desktop/Workspace/register/success.html" method="post">
+
+<label for="email">E-mail: </label> 
+<input type="text" id="email_field" name="email_field">
+<span>*</span><br>
+<label for="mobileNb">Mobile Phone:</label> 
+<input type="text" id=mobileNb_field>
+<span>*</span><br>
+
+<label for="country">Country: </label> 
+<select name="country" id="country"><span>*</span>
+<option value="Please Select one: "></option>
+<option value="Canada">Canada</option>
+<option value="USA">USA</option>
+<option value="Mexico">Mexico</option>
+</select><span>*</span><br>
+
+<label for="contactBy">Contact me by: </label> 
+<input type="radio" name=contact id="text" value="text" checked>Text
+<input type="radio" name=contact id="email" value="email" checked>Email
+<input type="radio" name=contact id="NAcontact" value="text">Don't Contact me<br>
+
+<label>Terms of service: </label>
+<input type="checkbox" name="terms" id="terms" >I accept
+<span>*</span><br>
+
+
+<input type="button" id="register" value="Register">
+<input type="reset" id="resetB" name="resetB" value="Reset" onclick="this.form.reset()" >
+
+</form>
+
+
+
+</body>
+</html>

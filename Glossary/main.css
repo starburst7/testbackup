@@ -10,6 +10,18 @@ div.toc_container {
 }
 
 
+#server {
+  display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+#emailForm span {
+	font-size: 0.75em;
+	color: red
+}
+
 div.hotkey_container{
 	font-size: 1.1em;
 	font-style: normal;

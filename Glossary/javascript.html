@@ -1,266 +1,305 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity;="sha256-hVVnYaiADRT02PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
 
-<meta charset="ISO-8859-1">
+  <meta charset="ISO-8859-1">
 
-<title>Index</title>
+  <title>Index</title>
 </head>
 
 
 <body>
 
 
-<h1>Javascript Glossary</h1>
+  <h1>Javascript Glossary</h1>
 
 
 
-<p class="toc_title">Contents</p>
-<ul class="toc_list">
-  <li><a href="#First_Point_Header">1 HTML Javascript basics</a>
-  <ul>
-    <li><a href="#SemElements">1.1 Primary Semantic Elements </a>
-    <ul><li><a href="#attrib">1.2 Attributes </a></li>
-    <li><a href="#Dom">1.3 The DOM </a></li>
-    
-     <li><a href="#Css styles">1.4 Styles</a>
-     <ul><li><a href="#selectors">1.4.1 Selectors in CSS</a></li></ul></li>
-     
-     <li><a href="#span-div">1.5 span and div Elements </a></li>
-     <li><a href="#scriptlink">1.6 Scripts </a></li>
-     <li><a href="#relaOper">1.7 Relational operators</a></li></ul></li>
-      <li><a href="#functions">1.8 Functions (declaration vs expressions)</a></li>
-      <li><a href="#strictmode">1.9 Pitfall: Global Variables. Use Strict mode</a></li> 
-     <li><a href="#event">1.10 Events</a></li>  
-     <li><a href="#form">1.11 Forms</a>
-     <ul>
-     <li><a href="#textbox_textarea">1.11.1 Controls: TextArea,Textbox</a></li> 
-      <li><a href="#radio_checkbox">1.12.2 Controls: Radio buttons, Select Menu, Checkboxes</a></li>
+  <p class="toc_title">Contents</p>
+  <ul class="toc_list">
+    <li><a href="#First_Point_Header">1 HTML Javascript basics</a>
+      <ul>
+        <li><a href="#SemElements">1.1 Primary Semantic Elements </a>
+          <ul>
+            <li><a href="#attrib">1.2 Attributes </a></li>
+            <li><a href="#Dom">1.3 The DOM </a></li>
+
+            <li><a href="#Css styles">1.4 Styles</a>
+              <ul>
+                <li><a href="#selectors">1.4.1 Selectors in CSS</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#span-div">1.5 span and div Elements </a></li>
+            <li><a href="#scriptlink">1.6 Scripts </a></li>
+            <li><a href="#relaOper">1.7 Relational operators</a></li>
+          </ul>
+        </li>
+        <li><a href="#functions">1.8 Functions (declaration vs expressions)</a></li>
+        <li><a href="#strictmode">1.9 Pitfall: Global Variables. Use Strict mode</a></li>
+        <li><a href="#event">1.10 Events</a></li>
+        <li><a href="#form">1.11 Forms</a>
+          <ul>
+            <li><a href="#textbox_textarea">1.11.1 Controls: TextArea,Textbox</a></li>
+            <li><a href="#radio_checkbox">1.12.2 Controls: Radio buttons, Select Menu, Checkboxes</a></li>
+          </ul>
+          <br><br>
       </ul>
- <br><br> </ul>
-</li>
+    </li>
 
-<li>2.0 Useful Objects
-<ul>
-<li><a href="#Second_Point_Header">2 Window Object</a>
- <ul>
-    <li><a href="#parseIntFloat">2.1.1 The parseInt() and parseFloat()   [String --> int]</a></li>
-    <li><a href="#">2.1.2  </a></li></ul></li>
-     <li><a href="#textbox">2.2 Textbox object</a></li>
-      <li><a href="#Date">2.3 Date object</a></li>
-      
-      <li><a href="#textbox">2.4 Number Object</a>
-      <ul><li><a href="#toFixed">2.4.1 toFixed()  [int --> String]</a></li>
-    <li><a href="#execlass">2.4.2  </a></li></ul>
-    
-    </ul><br>
-        
+    <li>2.0 Useful Objects
+      <ul>
+        <li><a href="#Second_Point_Header">2 Window Object</a>
+          <ul>
+            <li><a href="#parseIntFloat">2.1.1 The parseInt() and parseFloat() [String --> int]</a></li>
+            <li><a href="#">2.1.2 </a></li>
+          </ul>
+        </li>
+        <li><a href="#textbox">2.2 Textbox object</a></li>
+        <li><a href="#Date">2.3 Date object</a></li>
 
-<li><a href="#Third_Point_Header">3 Document object and Element Objects(Nodes)</a>
-<ul>
-    
-    <li><a href="#writeln">3.1 Document object: write to html body from javascript</a></li>
-     <li><a href="#">3.2 DOM Scripting </a>
-     <ul>
-     <li><a href="#elemNodes">3.3 Methods of Element Nodes(objects) </a></li>
-     <li><a href=#domHtmlSpec>3.4 Dom Core specification Vs Dom Html Specification</a>
-     <li><a href="#attachAllTag">3.5 How to manipulate all elements of same type(ex: Dropdown menu of h2)</a></li>
-     </ul></li>
-  </ul>
-<br></li>
+        <li><a href="#textbox">2.4 Number Object</a>
+          <ul>
+            <li><a href="#toFixed">2.4.1 toFixed() [int --> String]</a></li>
+            <li><a href="#execlass">2.4.2 </a></li>
+          </ul>
 
-<li><a href="#Second_Point_Header">4 **TOFILL**</a>
- <ul>
-   <li><a href="#toFixed">4.1 toFixed()  [int --> String]</a></li>
-    <li><a href="#execlass">4.2  </a></li>
+      </ul><br>
+
+
+    <li><a href="#Third_Point_Header">3 Document object and Element Objects(Nodes)</a>
+      <ul>
+
+        <li><a href="#writeln">3.1 Document object: write to html body from javascript(SEE 3.6 also)</a></li>
+        <li><a href="#">3.2 DOM Scripting </a>
+          <ul>
+            <li><a href="#elemNodes">3.3 Methods of Element Nodes(objects) </a></li>
+            <li><a href=#domHtmlSpec>3.4 Dom Core specification Vs Dom Html Specification</a>
+            <li><a href="#attachAllTag">3.5 How to manipulate all elements of same type(ex: Dropdown menu of h2)</a></li>
+            <li><a href="#innerHTML">3.6 InnerHTML: setting or returning HTML content of Element(see 3.1 also)</a></li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+    </li>
+
+    <li><a href="#Second_Point_Header">4 jQuery</a>
+      <ul>
+        <li><a href="#jQselectors">4.1 selectors</a></li>
+        <li><a href="#getterSetters">4.2 Getter/Setters val(),text(),next() </a></li>
         <li><a href="#importLibrary">4.3 </a></li>
 
-    
+
+      </ul>
+    </li>
+
   </ul>
-</li>
-
-</ul>
 
 
-<div class="hotkey_container">
-<table id="HotkeyTable">
-  <tr>
-    <th></th>
-    <th></th>
-   
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-   
-  </tr>
-  <tr>
-    <td>empty</td>
-    <td>empty</td>
-    
-  </tr>
-  <tr>
-    <td>empty</td>
-    <td>empty</td>
-    
-  </tr>
-  <tr>
-    <td>empty</td>
-    <td>empty</td>
-    
-  </tr>
-</table>
-</div>
+  <div class="hotkey_container">
+    <table id="HotkeyTable">
+      <tr>
+        <th></th>
+        <th></th>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>empty</td>
+        <td>empty</td>
+
+      </tr>
+      <tr>
+        <td>empty</td>
+        <td>empty</td>
+
+      </tr>
+      <tr>
+        <td>empty</td>
+        <td>empty</td>
+
+      </tr>
+    </table>
+  </div>
 
 
-<img src="img/elements.jpg"   id="SemElements" ><br>
-<img src="img/attributes.jpg"   id="attrib"><br><br>
-<h2 id="Dom" >DOM: The Document Object Model</h2>
- <p>Represents all elements and attributes that are coded in the HTML.<br>
-    It is generated by the browser when a page is loaded.<br><br>  </p>
-<img src="img/styles.jpg"   id="styles"><br>
-<img src="img/selectors.jpg"   id="selectors"><br>
-<img src="img/span&div.jpg"   id="span-div"><br><br>
-<h1>How to implement scripts<br></h1>
-<h2>External: In the Javascript file</h2><br>
--place script tag with link to JS file at top of html's header section and the code in JS the file<br>
-<img src="img/scriptlink.jpg"   id="scriptlink"><br>
-<h2>Internal: In the HTML itself</h2><br>
-You can can directly place script tag in body or head that contains the JS code(depending on when the particular script should load)
-<br><br><br>
+  <img src="img/elements.jpg" id="SemElements"><br>
+  <img src="img/attributes.jpg" id="attrib"><br><br>
+  <h2 id="Dom">DOM: The Document Object Model</h2>
+  <p>Represents all elements and attributes that are coded in the HTML.<br>
+    It is generated by the browser when a page is loaded.<br><br> </p>
+  <img src="img/styles.jpg" id="styles"><br>
+  <img src="img/selectors.jpg" id="selectors"><br>
+  <img src="img/span&div.jpg" id="span-div"><br><br>
+  <h1>How to implement scripts<br></h1>
+  <h2>External: In the Javascript file</h2><br>
+  -place script tag with link to JS file at top of html's header section and the code in JS the file<br>
+  <img src="img/scriptlink.jpg" id="scriptlink"><br>
+  <h2>Internal: In the HTML itself</h2><br>
+  You can can directly place script tag in body or head that contains the JS code(depending on when the particular
+  script should load)
+  <br><br><br>
+
+  <img src="img/parseIntFloat.jpg" id="parseIntFloat"><br>
+  <img src="img/writeln.jpg" id="writeln"><br>
+  <img src="img/relaOper.jpg" id="relaOper"><br>
+  <img src="img/relaOper2.jpg" id="relaOper2"><br>
+  <img src="img/textbox.jpg" id="textbox"><br>
+  <img src="img/toFixed.jpg" id="toFixed"><br>
+  <img src="img/date.jpg" id="Date"><br>
+  <img src="img/functions.jpg" id=functions><br>
+  <img src="img/event.jpg" id=event><br>
+
+  <p> Note: We attach the function TO THE EVENT (and NOT the other way around i.e joinList=event )</p>
+  <img src="img/eventHandler.jpg"><br>
+  <h2>Using Strict Mode to prevent accidental Global variables</h2>
+
+  <p id="strictmode"> Insert at top of JS file. purpose : throw an error if you accidentally
+    forget to add "var" identifier(thus making a variable global by accident)
+    Avoid naming conflicts for large programs.<br>Prevents the declaration of a variable without using var keyword
+    basically or else JavaScript engine may create a new global variable if it were non-existent before.<br>Example:<br><br>
+    var calculateTax = function( subtotal, taxRate) {<br> tax= subtotal* taxRate; // no var keyword so tax is treated
+    as global<br>
+    tax= tax.toFixed(2);
+    } ;</p>
+
+  <h2>Best Coding practice for working with local and global variables</h2>
+  <p>
+    1. Use local variables whenever possible<br>
+    2. always use strict mode put "use strict"; at top of code<br>
+    3. declare the variables that are used by a function at the start of function before you use them.<br>
+    4. If there are numerous functions, each function should only calls functions that precede it in the code(logical
+    ordering)
+    <br><br></p>
+
+  <img src="img/form2.jpg" id=form>
+  <h1>Template for Forms</h1>
+  <h2>Please join our email list</h2>
+  <h2>Register for an Account</h2>
+
+  <body>
+
+    <form id="emailForm" name="emailForm" action="file:///C:/Users/2flare/Desktop/Workspace/register/success.html"
+      method="post">
+
+      <label for="email">E-mail: </label>
+      <input type="text" id="email_field" name="email_field">
+      <span>*</span><br>
+      <label for="mobileNb">Mobile Phone:</label>
+      <input type="text" id=mobileNb_field>
+      <span>*</span><br>
+
+      <label for="country">Country: </label>
+      <select name="country" id="country"><span>*</span>
+        <option value="Please Select one: "></option>
+        <option value="Canada">Canada</option>
+        <option value="USA">USA</option>
+        <option value="Mexico">Mexico</option>
+      </select><span>*</span><br>
+
+      <label for="contactBy">Contact me by: </label>
+      <input type="radio" name=contact id="text" value="text" checked>Text
+      <input type="radio" name=contact id="email" value="email" checked>Email
+      <input type="radio" name=contact id="NAcontact" value="text">Don't Contact me<br>
+
+      <label>Terms of service: </label>
+      <input type="checkbox" name="terms" id="terms">I accept
+      <span>*</span><br>
 
 
-<img src="img/parseIntFloat.jpg"   id="parseIntFloat"><br>
-<img src="img/writeln.jpg"   id="writeln"><br>
-<img src="img/relaOper.jpg"   id="relaOper"><br>
-<img src="img/relaOper2.jpg"   id="relaOper2"><br>
-<img src="img/textbox.jpg"   id="textbox"><br>
-<img src="img/toFixed.jpg"   id="toFixed"><br>
-<img src="img/date.jpg" id="Date"><br>
-<img src="img/functions.jpg" id=functions><br>
-<img src="img/event.jpg" id=event><br>
+      <input type="button" id="register" value="Register">
+      <input type="reset" id="resetB" name="resetB" value="Reset" onclick="this.form.reset()">
 
-<p> Note: We attach the function TO THE EVENT (and NOT the other way around i.e  joinList=event )</p>
-<img src="img/eventHandler.jpg"><br>
-<h2>Using Strict Mode to prevent accidental Global variables</h2>
+    </form>
+    <script>
 
-<p id="strictmode"> Insert at top of JS file. purpose : throw an error if you accidentally
-forget to add "var" identifier(thus making a variable global by accident)
-Avoid naming conflicts for large programs.<br>Prevents the declaration of a variable without using var keyword basically or else JavaScript engine may create a new global variable if it were non-existent before.<br>Example:<br><br>
-var calculateTax = function( subtotal, taxRate) {<br> tax= subtotal* taxRate; // no var keyword so tax is treated as global<br>
-tax= tax.toFixed(2);
-} ;</p>
+      var $ = function (id) {
 
-<h2>Best Coding practice for working with local and global variables</h2>
-<p>
-1. Use local variables whenever possible<br>
-2. always use strict mode   put   "use strict";  at top of code<br>
-3. declare the variables that are used by a function at the start of function before you use them.<br>
-4. If there are numerous functions, each function should only calls functions that precede it in the code(logical ordering)
-<br><br></p>
-
-<img src="img/form2.jpg" id=form>
-<h1>Template for Forms</h1>
-<h2>Please join our email list</h2>
-        <h2>Register for an Account</h2>
-<body>
-
-<form id="emailForm" name="emailForm" action="C:\Users\2flare\Desktop\Workspace\register\success.html" method="get">
-
-<label for="email">E-mail: </label> 
-<input type="text" id="email_field" name="email_field"><span>*</span><br>
-<label for="mobileNb">Mobile Phone:</label> <input type="text" id=mobileNb_field>
-<span>*</span><br>
-
-<label for="country">Country: </label> 
-<select name="country" id="country">
-<option value="Please Select one: "></option>
-<option value="Canada">Canada</option>
-<option value="USA">USA</option>
-<option value="Mexico">Mexico</option>
-</select><span>*</span><br>
-
-<label for="contactBy">Contact me by: </label> 
-<input type="radio" name=contact id="text" value="text" checked>Text
-<input type="radio" name=contact id="email" value="email" checked>Email
-<input type="radio" name=contact id="NAcontact" value="text">Don't Contact me<br>
-
-<label>Terms of service: </label>
-<input type="checkbox" name="terms" id="terms" >I accept<span>*</span><br>
-
-<input type="button" id="register" value="Register">
-<input type="reset" id="reset" value="Reset">
-
-</form>
-  <script>
-  
-  var $=function(id){
-		
-		return document.getElementById(id);
-	}
-
-
-
-	var validateInputs= function() {
-		
-		var msg="missing: \n";
-		
-		var userEmail= $("email_field").value;
-		if(userEmail=="") 
-			msg +="-email\n"
-
-		var userNb= $("mobileNb_field").value;
-		if(userNb=="")  
-			msg +="-mobile number \n"
-
-		var userCountry= $("country").value;
-		if(userCountry=="Please Select one: ")  
-			msg +="-country\n"
-				
-		var tosInput= $("terms");
-		if(tosInput.checked==false)
-			msg+="-You must accept Terms of service";
-		
-		if(msg!="missing: \n")
-			alert(msg);
-		
-		else 
-			$("emailForm").submit();
-		
-		
-		
-	}
-
-	window.onload = function() {
-		 $("register").onclick=validateInputs;
-		 }
-	
-  	</script> 
-  	
-  	<br><br><br>
-  	
-  	<img src="img/textbox_textarea.jpg" id=textbox_textarea><br>
-  	<img src="img/radio_checkbox.jpg" id=radio_checkbox><br><br><br><br>
-  
-  	<img src="img/domNodes.jpg" id=domNodes><br><br><br><br>
-  	 <img src="img/elemNodes.jpg" id=elemNodes><br><br><br><br>     
-<img src="img/domHtmlSpec.jpg" id=domHtmlSpec><br><br><br><br>
-<img src="img/attachAllTag.jpg" id=attachAllTag>
-<img src="img/domCss.jpg" id=domCss>
-<br><br><br><br>
+        return document.getElementById(id);
+      }
 
 
 
-</body>
+      var validateInputs = function () {
+
+        var msg = "missing: \n";
+
+        var userEmail = $("email_field").value;
+        if (userEmail == "") {
+          msg += "-email\n"
+          $("email_field").nextElementSibling.firstChild.nodeValue = "This field is required";
+        }
+
+        var userNb = $("mobileNb_field").value;
+        if (userNb == "") {
+          msg += "-mobile number \n"
+          $("mobileNb_field").nextElementSibling.firstChild.nodeValue = "This field is required";
+
+        }
+
+        var userCountry = $("country").value;
+        if (userCountry == "Please Select one: ") {
+          msg += "-country\n"
+          $("country").nextElementSibling.firstChild.nodeValue = "This field is required";
+        }
+        var tosInput = $("terms");
+        if (tosInput.checked == false) {
+          msg += "-You must accept Terms of service";
+          $("terms").nextElementSibling.firstChild.nodeValue = "This field is required";
+        }
+        if (msg != "missing: \n")
+          alert(msg);
+
+        else
+          $("emailForm").submit();
+
+      }
+
+      window.onload = function () {
+        $("register").onclick = validateInputs;
+      }
+
+    </script>
+
+    <br><br><br>
+
+    <img src="img/textbox_textarea.jpg" id=textbox_textarea><br>
+    <img src="img/radio_checkbox.jpg" id=radio_checkbox><br><br><br><br>
+
+    <img src="img/domNodes.jpg" id=domNodes><br><br><br><br>
+    <img src="img/elemNodes.jpg" id=elemNodes><br><br><br><br>
+    <img src="img/domHtmlSpec.jpg" id=domHtmlSpec><br><br><br><br>
+    <img src="img/attachAllTag.jpg" id=attachAllTag>
+    <img src="img/domCss.jpg" id=domCss><br><br><br>
+    <img src="img/innerHTML.jpg" id=innerHTML><br>
+    Note: document.write("CODEHERE") is an alternative.
+    <br><br><br><br>
+
+    <h2>JQuery</h2><br><br>
+    <img src="img/jquery/jQselectors.jpg" id=jQselectors><br><br>
+    <img src="img/jquery/getterSetters.jpg" id=getterSetters><br><br>
+
+
+
+
+  </body>
+
 </html>

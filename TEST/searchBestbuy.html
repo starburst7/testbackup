@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style></style>
+    <title>Image page</title>
+    <meta charset="ISO-8859-1">
+    <script script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+
+        <label>Search for: </label>
+        <input type="text" id="term" name="term"><br>
+        <input type="button" id="launcher" name="launcher" value="Open Window"><br><br>
+    </main>
+
+
+
+
+    <script>
+        "use strict";
+     
+     
+        var browser;
+        
+
+        opener=function() {
+            var keySearch=document.getElementById("term").value
+            var url='https://www.bestbuy.ca'+'/en-CA/Search/SearchResults.aspx?query='+keySearch
+            browser = window.open(url);
+           
+           browser.$("#ctl00_MasterHeader_ctl00_uchead_GlobalSearchUC_TxtSearchKeyword").value("test")
+            
+        }
+        
+        
+       
+
+        document.getElementById("launcher").onclick = opener;
+
+
+
+
+    </script>
+</body>
+
+</html>

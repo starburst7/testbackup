@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<style>
+.Red11 
+{   
+  color: red;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<h1 id="111">Testing DOM</h1>
+
+<p id="112"> paragraph 1's text<br>  <span id="113">   span's old text</span></p>
+
+<p> Adding a class attribute and setting it to value Red11 which makes it Red by Css</p>
+
+
+
+<script>
+    //element accessor
+var $ = function(id){
+    return document.getElementById(id)};
+
+                                 /* INNER HTML.=> Manipulating HTML contents: Only works with id (not relative selection)
+Replace content of <H1> */
+$('111').innerHTML=
+"<h1>Replaced Header</h1><br>Picture inserted from innerHTML...<br><img src='C:/Users/2flare/git/repository/Glossary/img/pikachu.jpg'>";
+
+// Replace content of first <span> element within a <p> element =>relative selector
+$('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alternatively, can use document.getElementsByTagName....etc
+
+
+//add an attribute to an element:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
+document.getElementsByTagName("p")[1].setAttribute("class","Red11");
+// manipulate the object with the "class" above(replaces) => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
+
+
+</script>
+</body>
+
+</html>
+
+
+

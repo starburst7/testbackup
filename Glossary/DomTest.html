@@ -24,6 +24,7 @@
 
 <p> Adding a class attribute and setting it to value Red11 which makes it Red by Css</p>
 
+<p id="114"><div class="toy" >Text under div </div></p>
 
 
 <script>
@@ -34,11 +35,17 @@ var $ = function(id){
 Replace content of <H1> */
 $('111').innerHTML=
 "<h1>Replaced Header</h1><br>Picture inserted from innerHTML...<br><img src='C:/Users/2flare/git/repository/Glossary/img/pikachu.jpg'>";
+
 // Replace content of first <span> element within a <p> element =>relative selector
 $('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alternatively, can use document.getElementsByTagName....etc
-//add an attribute to an element:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
+
+
+//inject an attribute to the 2nd <p>:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
 document.getElementsByTagName("p")[1].setAttribute("class","Red11");
 // manipulate the object with the "class" above(replaces) => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
+
+
+console.log(  $('114').firstElementChild.firstChild.nodeValue );
 </script>
 </body>
 

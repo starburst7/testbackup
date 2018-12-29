@@ -6,6 +6,11 @@
 <title>Insert title here</title>
 
 
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+			  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+			  crossorigin="anonymous"></script>
+
 <style>
 .Red11 
 {   
@@ -22,7 +27,11 @@
 
 <p id="112"> paragraph 1's text<br>  <span id="113">   span's old text</span></p>
 
-<p> Adding a class attribute and setting it to value Red11 which makes it Red by Css</p>
+
+ <div class="toy"> div inside the p element</div>
+     Adding a class attribute and setting it to value Red11 which makes it Red by Css</p>
+
+
 
 
 
@@ -40,9 +49,13 @@ $('111').innerHTML=
 $('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alternatively, can use document.getElementsByTagName....etc
 
 
-//add an attribute to an element:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
+//add an attribute "class" inside an element <p>:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
 document.getElementsByTagName("p")[1].setAttribute("class","Red11");
-// manipulate the object with the "class" above(replaces) => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
+// to manipulate the object with the "class" above(replaces)  => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
+
+//finds <div> by its attribute "class", then accesses its text node and prints it in Chrome browser
+console.log((document.getElementsByClassName("toy")[0].firstChild.nodeValue));
+
 
 
 </script>

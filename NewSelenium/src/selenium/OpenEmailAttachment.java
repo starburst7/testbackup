@@ -1,6 +1,7 @@
 package selenium;
 
 
+
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -29,7 +30,7 @@ import javax.print.attribute.standard.Copies;
 
 import org.openqa.selenium.*;
 
-public class OpenPrintEmailAttachment {
+public class OpenEmailAttachment {
 
     private static ChromeDriverService service;
     private WebDriver driver;
@@ -88,22 +89,15 @@ public class OpenPrintEmailAttachment {
         
         
         
-       
+        
        
         //opens last e-mail in outlook
         Actions action = new Actions(driver);
         wait.until(ExpectedConditions.elementToBeClickable(By.className("_3HQ_h7iVcVeOo03bOFpl__")));
         
-        
-        driver.findElement(By.className('_3HQ_h7iVcVeOo03bOFpl__')).
-        JavascriptExecutor js= (JavascriptExecutor)driver;
-        js.executeScript("driver.findElement(By.className('_3HQ_h7iVcVeOo03bOFpl__')). ");
-        
-        
-        /*
         action.moveToElement(driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__"))).perform();;
         action.click(driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__"))).perform();
-     */// alternative to open MS menu:    driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__")).click();  //or using same className as above.
+     // alternative to open MS menu:    driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__")).click();  //or using same className as above.
       
         //opens attachment of the email
         wait.until(ExpectedConditions.elementToBeClickable(By.className("_3FOG-LZJRKbKTlskWczqXJ")));
@@ -115,24 +109,26 @@ public class OpenPrintEmailAttachment {
         ///////get text from a div's text node. Then use this text(name of file) to launch a new window and then print that window
        
         
-        //use javascript to get text node from <div> and returns it as an ArrayList<RemoteWebElement> which we store in an Object.
-        
+        //use javascript to get text node from <div> => returns an ArrayList<RemoteWebElement> that holds text node. 
+        //This arraylist is in Object var.
+        JavascriptExecutor js= (JavascriptExecutor)driver;
         Object textInArrayList=js.executeScript("return document.getElementsByClassName(\"_2rAN8ltsKDy-NItWETekFN _1uQGiBv-yESO7W9wcqabjy _2jA_Nob0bnzClVUjNJfDsr\")");
         
-        //click on download from dropdown caused by previous line of code
+        //click on download from dropdown caused by previous line of code. Downloads the file to location in fullpath below.
           action.moveToElement(driver.findElement(By.name("Download"))).perform();;
           action.click(driver.findElement(By.name("Download"))).perform();
           
+          //extracting fileName from RemoteWebElement object inside the ArrayList.
+          //downcast to ArrayList<RemoteWebElement> and then extract from 1st index.
           ArrayList<RemoteWebElement> arrayListRemote= (ArrayList<RemoteWebElement>)textInArrayList;
          String fileName=arrayListRemote.get(0).getText();
          
           String fullPath1 = "C:\\\\Users\\\\2flare\\\\Downloads\\\\"+fileName;
           
-         
          System.out.print(fullPath1);
-         
         driver.get(fullPath1);
-         js.executeScript("window.print()");
+        
+        
           
          
           
@@ -193,8 +189,8 @@ public class OpenPrintEmailAttachment {
           System.out.println("ok...please wait");
           */
           
-          OpenPrintEmailAttachment.createAndStartService();
-          OpenPrintEmailAttachment test = new OpenPrintEmailAttachment();
+          OpenEmailAttachment.createAndStartService();
+          OpenEmailAttachment test = new OpenEmailAttachment();
           test.createDriver();
           test.testGoogleSearch("dutt.a@live.ca","tew73Vew");
           

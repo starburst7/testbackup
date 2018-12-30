@@ -26,6 +26,33 @@
 
 <p id="114"><div class="toy" >Text under div </div></p>
 
+<div class="_3HQ_h7iVcVeOo03bOFpl__"><div class="ms-TooltipHost root-101"><span>dutt a</span></div></div>
+
+
+<div class="_1fnZUezBeHUsn6oEcNKv0f">
+<div class="_3W3TYjQVxhGv87qQmR_0B1">
+<div class="UwIcdaU4OSkEo-8UcNQB-">
+<span>Payment posted | Paiement inscrit
+</span>
+</div>
+<div class="_1ALxMLhWSP7TcnvPXv-NKB">
+<div class="_1CL6g6bdilw8vGUlwy3cwp">
+<span class="_2FgAR8a17v_vs5Wo3aA7SR">Thanks for your recent payment. | Merci de votre paiement. EN | FR Sign In Thanks for your payment of $110.00. Re: Account ending in 2567 Hi, AMIT, Here are the details of your posted payment: December 28, 2018 $110.00 Sign in
+</span></div></div></div></div>
+
+
+<div class="_1fnZUezBeHUsn6oEcNKv0f">
+<div class="_3W3TYjQVxhGv87qQmR_0B1">
+<div class="UwIcdaU4OSkEo-8UcNQB-">
+<span>Amit
+</span>
+</div>
+<div class="_1ALxMLhWSP7TcnvPXv-NKB">
+<div class="_1CL6g6bdilw8vGUlwy3cwp">
+<span class="_2FgAR8a17v_vs5Wo3aA7SR">Thanks for your recent payment. | Merci de votre paiement. EN | FR Sign In Thanks for your payment of $110.00. Re: Account ending in 2567 Hi, AMIT, Here are the details of your posted payment: December 28, 2018 $110.00 Sign in
+</span></div></div></div></div>
+
+
 
 <script>
     //element accessor
@@ -44,8 +71,48 @@ $('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alte
 document.getElementsByTagName("p")[1].setAttribute("class","Red11");
 // manipulate the object with the "class" above(replaces) => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
 
+//retrieve text node from <div> within <p> where div is NOT considered a childNode. 
+console.log(  $('114').nextElementSibling.firstChild.nodeValue )
 
-console.log(  $('114').firstElementChild.firstChild.nodeValue );
+// <div>  <div><span></span></div>  </div>    =>retrieve text from span encapsulated via 2 <divs>. **USING FIRST DIV as starting point.
+console.log( document.getElementsByClassName("_3HQ_h7iVcVeOo03bOFpl__")[0].firstElementChild.firstElementChild.firstChild.nodeValue )
+
+// <div>  <div><span></span></div> <div><div> <span></span></div></div></div></div>  ** USING THIRD DIV as starting point
+console.log( document.getElementsByClassName("UwIcdaU4OSkEo-8UcNQB-")[0].firstElementChild.firstChild.nodeValue )
+
+
+
+var x=0;
+var y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-'); 
+
+for(i=0 ;i<=y.length-1 ; i++){
+    var z= y[i].firstElementChild.firstChild.nodeValue.trim();
+   if(z ==='Payment posted | Paiement inscrit'){   //If e-mail's title is found in Collections
+    document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[i].click();
+    }
+
+    else {
+        console.log('Attempt at accessing e-mail with the underlying Title failed. It was not found');
+    };
+}
+
+   
+
+   
+
+   
+
+
+
+
+  //  if(y=='Payment posted | Paiement')
+     
+ 
+      //  y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[x].firstElementChild.firstChild.nodeValue;
+  
+
+
+
 </script>
 </body>
 

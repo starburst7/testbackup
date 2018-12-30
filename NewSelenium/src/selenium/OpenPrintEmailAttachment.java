@@ -95,38 +95,43 @@ public class OpenPrintEmailAttachment {
         wait.until(ExpectedConditions.elementToBeClickable(By.className("_3HQ_h7iVcVeOo03bOFpl__")));
         
         
-        driver.findElement(By.className('_3HQ_h7iVcVeOo03bOFpl__')).
-        JavascriptExecutor js= (JavascriptExecutor)driver;
-        js.executeScript("driver.findElement(By.className('_3HQ_h7iVcVeOo03bOFpl__')). ");
+        //Retrieve array with all elements with matching Class name
+        //Then Loop through every element's text nodes until text node matches E-mail Title that is desired(ex: Print Job). 
+        //Then click that element that has it.
+        JavascriptExecutor js= (JavascriptExecutor)driver;     
+js.executeScript("var x=0;\r\n" + 
+        "var y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-'); \r\n" + 
+        "\r\n" + 
+        "for(i=0 ;i<=y.length-1 ; i++){\r\n" + 
+        "    var z= y[i].firstElementChild.firstChild.nodeValue.trim();\r\n" + 
+        "   if(z ==='Print Job'){   \r\n" +                                  /// THE TEXTNODE IN QUESTION THAT IS SEARCHED FOR
+        "    document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[i].click();\r\n" + 
+        "    }\r\n" + 
+        "\r\n" + 
+        "    else {\r\n" + 
+        "        console.log('Attempt at accessing e-mail with the underlying Title failed. It was not found');\r\n" + 
+        "    };\r\n" + 
+        "}");
         
         
-        /*
-        action.moveToElement(driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__"))).perform();;
-        action.click(driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__"))).perform();
-     */// alternative to open MS menu:    driver.findElement(By.className("_3HQ_h7iVcVeOo03bOFpl__")).click();  //or using same className as above.
-      
         //opens attachment of the email
         wait.until(ExpectedConditions.elementToBeClickable(By.className("_3FOG-LZJRKbKTlskWczqXJ")));
-        
         action.moveToElement(driver.findElement(By.className("_3FOG-LZJRKbKTlskWczqXJ"))).perform();;
         action.click(driver.findElement(By.className("_3FOG-LZJRKbKTlskWczqXJ"))).perform();
         
         
-        ///////get text from a div's text node. Then use this text(name of file) to launch a new window and then print that window
-       
-        
-        //use javascript to get text node from <div> and returns it as an ArrayList<RemoteWebElement> which we store in an Object.
-        
-        Object textInArrayList=js.executeScript("return document.getElementsByClassName(\"_2rAN8ltsKDy-NItWETekFN _1uQGiBv-yESO7W9wcqabjy _2jA_Nob0bnzClVUjNJfDsr\")");
-        
+        ///////get text from a div's text node(name of file). Then use this text(name of file) to launch a new window and then print that window
+        //HOW use javascript to get text node from <div> and returns as Object to downcast into String.
+        //then we will downcast it from Object to ArrayList of RemoteWebElement base in order to retrieve the element.
+        Object textNodeForFileName=js.executeScript("return document.getElementsByClassName('_2rAN8ltsKDy-NItWETekFN _1uQGiBv-yESO7W9wcqabjy _2jA_Nob0bnzClVUjNJfDsr')[0].firstChild.nodeValue");
+        System.out.println(textNodeForFileName);
         //click on download from dropdown caused by previous line of code
           action.moveToElement(driver.findElement(By.name("Download"))).perform();;
           action.click(driver.findElement(By.name("Download"))).perform();
           
-          ArrayList<RemoteWebElement> arrayListRemote= (ArrayList<RemoteWebElement>)textInArrayList;
-         String fileName=arrayListRemote.get(0).getText();
-         
-          String fullPath1 = "C:\\\\Users\\\\2flare\\\\Downloads\\\\"+fileName;
+ 
+          String fileNameString= (String)textNodeForFileName;    
+          String fullPath1 = "C:\\\\Users\\\\2flare\\\\Downloads\\\\"+fileNameString;
           
          
          System.out.print(fullPath1);
@@ -137,23 +142,9 @@ public class OpenPrintEmailAttachment {
          
           
           
-          /*
-         if(Desktop.isDesktopSupported()==true) {
-             Desktop fileOpener=Desktop.getDesktop();
+        
              
-             try {
-               
-                fileOpener.open(f);
-            } catch (IOException e) {
-                
-                e.printStackTrace();
-                System.out.print("error opening file");
-            }
-             
-         } */
-          
-       // js.executeScript("window.print();");
-      
+       
         /*wait 500 nanoseconds
         try {
             Thread.sleep(1000);

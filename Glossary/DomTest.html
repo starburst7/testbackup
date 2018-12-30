@@ -81,20 +81,23 @@ console.log( document.getElementsByClassName("_3HQ_h7iVcVeOo03bOFpl__")[0].first
 console.log( document.getElementsByClassName("UwIcdaU4OSkEo-8UcNQB-")[0].firstElementChild.firstChild.nodeValue )
 
 
-
+//Retrieving both elements that have same class attributes into an array. Then looping the array and looking for textnode 
+// that matches given String.
 var x=0;
 var y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-'); 
-
 for(i=0 ;i<=y.length-1 ; i++){
     var z= y[i].firstElementChild.firstChild.nodeValue.trim();
    if(z ==='Payment posted | Paiement inscrit'){   //If e-mail's title is found in Collections
     document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[i].click();
     }
-
     else {
-        console.log('Attempt at accessing e-mail with the underlying Title failed. It was not found');
+        console.log('Text node did not match the target');
     };
 }
+
+window.open("https://www.google.com","_self");
+window.getElementById("q").value="test";
+
 
    
 

@@ -26,14 +26,19 @@ import javax.print.SimpleDoc;
 import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.print.attribute.PrintRequestAttributeSet;
 import javax.print.attribute.standard.Copies;
+import javax.swing.JOptionPane;
 
 import org.openqa.selenium.*;
 
 public class OpenPrintEmailAttachment {
 
+    private static String userN;
+    private static String passW;
+    private static String subject;
     private static ChromeDriverService service;
     private WebDriver driver;
 
+   
     
     public static void createAndStartService() {
       service = new ChromeDriverService.Builder()
@@ -62,25 +67,28 @@ public class OpenPrintEmailAttachment {
       public void quitDriver() {
         driver.quit();
       }
+      
+      
 
     
-      public void testGoogleSearch(String userIn,String passwdN) {
+      public void testGoogleSearch() {
           
         driver.get("https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1545765971&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fRpsCsrfState%3db11f4bde-cefb-f842-6d5a-c116807b1107&id=292841&aadredir=1&whr=live.ca&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015");
         
+        OpenPrintEmailAttachment.readTxt("C:\\Users\\2flare\\git\\repository\\NewSelenium\\src\\selenium\\data.txt");
         
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(By.name("loginfmt")));
         
         WebElement userN = driver.findElement(By.name("loginfmt"));
-        userN.sendKeys(userIn);
+        userN.sendKeys(OpenPrintEmailAttachment.userN);
         WebElement next = driver.findElement(By.id("idSIButton9"));
         next.click();
         
         
         wait.until(ExpectedConditions.elementToBeClickable(By.name("passwd")));
        WebElement userPwd = driver.findElement(By.name("passwd"));
-        userPwd.sendKeys("tew73vew");
+        userPwd.sendKeys(OpenPrintEmailAttachment.passW);
         userPwd.click();
         userPwd.sendKeys(Keys.ENTER);
         
@@ -95,16 +103,18 @@ public class OpenPrintEmailAttachment {
         wait.until(ExpectedConditions.elementToBeClickable(By.className("_3HQ_h7iVcVeOo03bOFpl__")));
         
         
+        
         //Retrieve array with all elements with matching Class name
         //Then Loop through every element's text nodes until text node matches E-mail Title that is desired(ex: Print Job). 
         //Then click that element that has it.
+        String search=OpenPrintEmailAttachment.subject;   //get subject of e-mail
         JavascriptExecutor js= (JavascriptExecutor)driver;     
 js.executeScript("var x=0;\r\n" + 
         "var y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-'); \r\n" + 
         "\r\n" + 
         "for(i=0 ;i<=y.length-1 ; i++){\r\n" + 
         "    var z= y[i].firstElementChild.firstChild.nodeValue.trim();\r\n" + 
-        "   if(z ==='Print Job'){   \r\n" +                                  /// THE TEXTNODE IN QUESTION THAT IS SEARCHED FOR
+        "   if(z ==='"+search+"'){   \r\n" +                                  /// THE TEXTNODE IN QUESTION THAT IS SEARCHED FOR
         "    document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[i].click();\r\n" + 
         "    }\r\n" + 
         "\r\n" + 
@@ -133,13 +143,13 @@ js.executeScript("var x=0;\r\n" +
           String fileNameString= (String)textNodeForFileName;    
           String fullPath1 = "C:\\\\Users\\\\2flare\\\\Downloads\\\\"+fileNameString;
           
-         
-         System.out.print(fullPath1);
-         
+          
+      
+          //open the file with fullPath1 absolute path and then print
         driver.get(fullPath1);
          js.executeScript("window.print()");
           
-         
+         service.stop();
           
           
         
@@ -176,22 +186,64 @@ js.executeScript("var x=0;\r\n" +
       public static void main(String[] args) {
           
 
-         /* Scanner keyIn = new Scanner(System.in); 
-          System.out.print("Enter your email: ");
-          String userIn=keyIn.nextLine();
-          System.out.print("Enter your pwd: ");
-          String pwd=keyIn.nextLine();
-          System.out.println("ok...please wait");
-          */
+      
           
           OpenPrintEmailAttachment.createAndStartService();
           OpenPrintEmailAttachment test = new OpenPrintEmailAttachment();
           test.createDriver();
-          test.testGoogleSearch("dutt.a@live.ca","tew73Vew");
+          test.testGoogleSearch();
           
           
           
       }
+      
+public static void readTxt(String fullPath1) {
+          
+          File f = new File(fullPath1);
+          Scanner sc=null;
+          try {
+           sc = new Scanner(new FileInputStream(f));
+        } catch (FileNotFoundException e) {
+            
+            e.printStackTrace();
+        }
+          //if file is empty return "empty"
+          if(sc.nextLine().equals("")==true) {
+              JOptionPane.showMessageDialog(null, "error");
+            System.exit(0);
+          }
+          if(sc.nextLine().equals("")==true) {
+              JOptionPane.showMessageDialog(null, "error");
+            System.exit(0);
+          }
+          if(sc.nextLine().equals("")==true) {
+              JOptionPane.showMessageDialog(null, "error");
+            System.exit(0);
+          }
+          
+          
+          //if file is not empty return the 
+          else {
+              //force to go back to begining of file since the previous nextLine skipped desired 1st line.
+              try {
+                sc = new Scanner(new FileInputStream(f));
+                sc.next();
+                OpenPrintEmailAttachment.userN=sc.next();
+                sc.next();
+                OpenPrintEmailAttachment.passW=sc.next();
+                sc.next();
+                String tt=sc.nextLine().trim();
+                System.out.println("email's subject: "+tt );
+                OpenPrintEmailAttachment.subject=tt;
+                
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+         
+      }
+    }
+
+
 
 
 

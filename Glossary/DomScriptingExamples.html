@@ -4,7 +4,7 @@
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 <style>
 .Red11 
@@ -18,6 +18,7 @@
 
 <body>
 
+*/------------ELEMENTS TO MANIPULATE BY STANDARD DOM SPECIFICATION -------*/
 <h1 id="111">Testing DOM</h1>
 
 <p id="112"> paragraph 1's text<br>  <span id="113">   span's old text</span></p>
@@ -53,18 +54,30 @@
 </span></div></div></div></div>
 
 
+/*--------------------------ELEMENTS TO MANIPULATE FOR JQUERY-----------------------------------------------*/
+
+<h1 id="115">Testing JQuery</h1>
+
+<p id="116"><div class="toy" >text nodes under all .toy class</div></p>
+
+<div class="laptops"><div class="highEndLaptops"><span>alienWare</span><span>ibuypower</span></div></div>
+
+ 
+
 
 <script>
-    //element accessor
-var $ = function(id){
-    return document.getElementById(id)};
-                                 /* INNER HTML.=> Manipulating HTML contents: Only works with id (not relative selection)
-Replace content of <H1> */
-$('111').innerHTML=
+
+  /*-------------------------Javascript for standard DOM elements above---------------*/  
+ 
+                                 // INNER HTML.=> Manipulating HTML contents: Only works with id (not relative selection)
+
+
+//Replace content of <H1>
+document.getElementById('111').innerHTML=
 "<h1>Replaced Header</h1><br>Picture inserted from innerHTML...<br><img src='C:/Users/2flare/git/repository/Glossary/img/pikachu.jpg'>";
 
 // Replace content of first <span> element within a <p> element =>relative selector
-$('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alternatively, can use document.getElementsByTagName....etc
+document.getElementById('112').getElementsByTagName("span")[0].innerHTML="span's newer text" ;  //alternatively, can use document.getElementsByTagName....etc
 
 
 //inject an attribute to the 2nd <p>:  create "class" attribute  with the value of "Red" to the <h1> element  //see <Style> in <head>  above
@@ -72,13 +85,14 @@ document.getElementsByTagName("p")[1].setAttribute("class","Red11");
 // manipulate the object with the "class" above(replaces) => document.getElementsByClassName("Red11")[0].firstChild.nodeValue="testing2";
 
 //retrieve text node from <div> within <p> where div is NOT considered a childNode. 
-console.log(  $('114').nextElementSibling.firstChild.nodeValue )
+console.log( document.getElementById('114').nextElementSibling.firstChild.nodeValue )
 
 // <div>  <div><span></span></div>  </div>    =>retrieve text from span encapsulated via 2 <divs>. **USING FIRST DIV as starting point.
 console.log( document.getElementsByClassName("_3HQ_h7iVcVeOo03bOFpl__")[0].firstElementChild.firstElementChild.firstChild.nodeValue )
 
 // <div>  <div><span></span></div> <div><div> <span></span></div></div></div></div>  ** USING THIRD DIV as starting point
 console.log( document.getElementsByClassName("UwIcdaU4OSkEo-8UcNQB-")[0].firstElementChild.firstChild.nodeValue )
+
 
 
 //Retrieving both elements that have same class attributes into an array. Then looping the array and looking for textnode 
@@ -97,28 +111,19 @@ for(i=0 ;i<=y.length-1 ; i++){
 
 
 
+/*------------------------JQUERY for Elements above--------------------*/
 
+//<h1 id="115">Testing JQuery</h1>
+console.log($( '#115').text() ) ;
 
+//returns CONCATENATED STRING of text node of EVERY element with 'toy' as its class(#114 & #116)
+console.log( $('.toy').text() ) ;
 
+// <div><span1><span2> </div>  looks inside class 'HighEndLaptops' and retrieves all its descendent <span> elements
+console.log( $('.highEndLaptops span ').text()  );
 
-
-
-   
-
-   
-
-   
-
-
-
-
-  //  if(y=='Payment posted | Paiement')
-     
- 
-      //  y=document.getElementsByClassName('UwIcdaU4OSkEo-8UcNQB-')[x].firstElementChild.firstChild.nodeValue;
-  
-
-
+//looks inside div class for 2nd <span>        **Note it's not like an array where (element)[0].firstChild.nodeValue
+console.log( $('.highEndLaptops span ').eq(1).text() ); 
 
 </script>
 </body>

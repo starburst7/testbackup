@@ -202,7 +202,7 @@ public void levelOrder() {
         
         //deleting node with value 50 from tree
         tree.delete(50);
-System.out.println("inorder traversal: ");tree.inorder(tree.rootNode);
+        System.out.println("inorder traversal: ");tree.inorder(tree.rootNode);
         
         System.out.println();
         
@@ -213,7 +213,10 @@ System.out.println("inorder traversal: ");tree.inorder(tree.rootNode);
         System.out.println("postorder traversal: ");tree.postorder(tree.rootNode);
         
         System.out.println();
-     
+        
+        System.out.println("Level order traversal: ");tree.levelOrder();
+        
+        System.out.println();
     }
     
     

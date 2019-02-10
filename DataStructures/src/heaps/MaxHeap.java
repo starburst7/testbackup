@@ -1,5 +1,7 @@
 package heaps;
 
+import java.util.Arrays;
+
 public class MaxHeap {
 private int[] heap;
 private int size;
@@ -8,7 +10,9 @@ public MaxHeap(int capacity) {
     
     heap= new int[capacity];
 }
-
+public void setSize(int size) {
+    this.size=size;
+}
 public boolean isFull() {
     return size==heap.length;
 }
@@ -61,7 +65,7 @@ public void heapifyUp(int index) {
     
     }
 
-public int removeMax(int index) {
+public int removeMax(int index) {  //the whole purpose of MaxHeaps is to remove max in O(1) time.
     int valueDeleted=0;
     
     if (isEmpty()) {
@@ -113,7 +117,7 @@ public void printHeap() {
 }
 
 public boolean isLeaf(int index) {
-    if(index>=(size/2)&&index<=size) return true;
+    if(index>=(size/2) && index<=size) return true;
     
     return false;
 }
@@ -126,6 +130,18 @@ public void swap(int index1, int index2) {
     heap[index2]=temp;
 }
 
+public void heapifyTree(int lastHeapIndex) {
+ 
+    if(lastHeapIndex!=-1) {
+    while(isLeaf(lastHeapIndex)==true) {  //skip all nodes that are leafs since they are automatically max heaps themselves
+        lastHeapIndex--;
+    }
+    this.heapifyDown(lastHeapIndex);
+    lastHeapIndex--;
+    heapifyTree(lastHeapIndex);
+    
+    }
+}
 
 
 public static void main(String[] args) {
@@ -165,7 +181,18 @@ public static void main(String[] args) {
     heapA.printHeap();
    
     
+    //creates a custom binary tree
+    MaxHeap heapB= new MaxHeap(9);  //set array size 9
+    int[] binTree= {1,23,2,4,30,90,7,2,3};  //store the values
+    heapB.heap=Arrays.copyOf(binTree, 9);  //copy it to be used by our program
+   heapB.setSize(heapB.heap.length);  //synchronize program with our array's size
+   
+   //heapifies the binary tree(array)
+    heapB.heapifyTree(heapB.heap.length-1);
+    heapB.printHeap();
     
+    heapB.removeMax(0);
+    heapB.printHeap();
 }
 
     

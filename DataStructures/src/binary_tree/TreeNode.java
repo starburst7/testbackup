@@ -26,6 +26,24 @@ public class TreeNode {
         return null;
     }
     
+    public TreeNode getInorderSuccessor() {
+        
+        TreeNode temp=null;
+        if(this.rightChild!=null) {
+            temp=this.rightChild;
+            
+            while(temp.leftChild!=null) {
+                temp=temp.leftChild;
+            }
+            
+        }
+            
+        
+       return temp;
+        
+        
+    }
+    
     public int min() {  //all min values are stored in LEFT edges
         
         if(leftChild==null)
@@ -66,21 +84,12 @@ public class TreeNode {
     }
     
     
-    public TreeNode delete(TreeNode node,int value) {
-        if(node==null)   
-            return node;
-   /*traverse until target node to delete*/   
-        //if value to delete is smaller than base root, recur left side of tree
-        if(value<node.data)
-           node.leftChild= delete(node.leftChild, value);
-        else if(value>node.data)
-            node.rightChild=delete(node.rightChild,value);
-
-        /* if current Node's value is equal to target value, then this is the node to be deleted */
-        else {
-            
-        }
-
+    public void delete(TreeNode nodeToDelete) {
+     
+        
+        
+        
+       
     }
         
         /*----------------Traversal Methods ----------------------*/

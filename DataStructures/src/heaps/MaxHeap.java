@@ -150,21 +150,21 @@ public static void main(String[] args) {
     
     heapA.insert(2);
     heapA.printHeap();
-    heapA.insert(5);
-    heapA.printHeap();
-    heapA.insert(3);
-    heapA.printHeap();
-    heapA.insert(9);
-    heapA.printHeap();
-    heapA.insert(2);
-    heapA.printHeap();
-    heapA.insert(11);
-    heapA.printHeap();
     heapA.insert(4);
     heapA.printHeap();
-    heapA.insert(17);
+    heapA.insert(6);
+    heapA.printHeap();
+    heapA.insert(8);
     heapA.printHeap();
     heapA.insert(10);
+    heapA.printHeap();
+    heapA.insert(12);
+    heapA.printHeap();
+    heapA.insert(14);
+    heapA.printHeap();
+    heapA.insert(16);
+    heapA.printHeap();
+    heapA.insert(18);
     heapA.printHeap();
     
     heapA.removeMax(0);

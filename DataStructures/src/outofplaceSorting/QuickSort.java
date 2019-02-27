@@ -24,8 +24,8 @@ public class QuickSort {
        if(start<end) {
            int partitionInd=partition(arr,start,end);
            
-           quickSort(arr,start,partitionInd-1);
-           quickSort(arr,partitionInd+1,end);
+           quickSort(arr,start,partitionInd-1); //recursive call for left of partition
+           quickSort(arr,partitionInd+1,end);   //recursive call for right of partition
        }
    }
     

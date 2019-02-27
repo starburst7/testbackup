@@ -1,0 +1,819 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Dog<Basics>",
+            "request": "launch",
+            "mainClass": "CLONEwithCopyConstructor.Dog",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Dog<Basics>(1)",
+            "request": "launch",
+            "mainClass": "CLONEwithMasterClone.Dog",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Pomeranian<Basics>",
+            "request": "launch",
+            "mainClass": "CLONEwithMasterClone.Pomeranian",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Basics>",
+            "request": "launch",
+            "mainClass": "CLONEwithMasterClone.Test",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Basics>(1)",
+            "request": "launch",
+            "mainClass": "Lists.Test",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Child<Basics>",
+            "request": "launch",
+            "mainClass": "accessInheritance.Child",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Parent<Basics>",
+            "request": "launch",
+            "mainClass": "accessInheritance.Parent",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Child2<Basics>",
+            "request": "launch",
+            "mainClass": "accessInheritance.protected1.Child2",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HidingStaticMembers<Basics>",
+            "request": "launch",
+            "mainClass": "accessInheritance.protected1.HidingStaticMembers",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinarySearch<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.BinarySearch",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BubbleSort<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.BubbleSort",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FindMaxMin<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.FindMaxMin",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FindMiddle<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.FindMiddle",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FindMultiples<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.FindMultiples",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PasswordBruteForce<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.PasswordBruteForce",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrimeNumberFinder<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.PrimeNumberFinder",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReverseOrderLoop<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.ReverseOrderLoop",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SumDigits<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.SumDigits",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Summation<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.Summation",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-insertionSort<Basics>",
+            "request": "launch",
+            "mainClass": "algorithms.insertionSort",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayList_Basics<Basics>",
+            "request": "launch",
+            "mainClass": "arrayList.ArrayList_Basics",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayCounters<Basics>",
+            "request": "launch",
+            "mainClass": "arrays.ArrayCounters",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayOfObjects<Basics>",
+            "request": "launch",
+            "mainClass": "arrays.ArrayOfObjects",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayWithReturnStmts<Basics>",
+            "request": "launch",
+            "mainClass": "arrays.ArrayWithReturnStmts",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LoopingArrays<Basics>",
+            "request": "launch",
+            "mainClass": "arrays.LoopingArrays",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MultidimensionalArrays<Basics>",
+            "request": "launch",
+            "mainClass": "arrays.MultidimensionalArrays",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-AccessorMutator<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.AccessorMutator",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ClassARelatedToB<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.ClassARelatedToB",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ClassBRelatedtoA<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.ClassBRelatedtoA",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CopyConstructor<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.CopyConstructor",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CopyConstructorAndClone<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.CopyConstructorAndClone",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Immutable<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.Immutable",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Mutable<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.Mutable",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Overloading<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.Overloading",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrivacyLeak<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.PrivacyLeak",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PublicCLassVsNonPublic<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.PublicCLassVsNonPublic",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomObject<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.RandomObject",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestImmutable<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.TestImmutable",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ToStringWithSysOutPrint<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.ToStringWithSysOutPrint",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingThis<Basics>",
+            "request": "launch",
+            "mainClass": "classesAndmethods.UsingThis",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingDecimalFormat<Basics>",
+            "request": "launch",
+            "mainClass": "decimalFormat.UsingDecimalFormat",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DecryptFile<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.DecryptFile",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Encryptor<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.Encryptor",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Encryptor2<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.Encryptor2",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HtmlCodeDownload<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.HtmlCodeDownload",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImageDownload<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.ImageDownload",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IsSupported<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.IsSupported",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LaunchBrowser<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.LaunchBrowser",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Launcher2<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.Launcher2",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OpenFile<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.OpenFile",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReadTextFile<Basics>",
+            "request": "launch",
+            "mainClass": "desktopcontrol.ReadTextFile",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SwitchEnum<Basics>",
+            "request": "launch",
+            "mainClass": "enumTypes.SwitchEnum",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SwitchEnums<Basics>",
+            "request": "launch",
+            "mainClass": "enumTypes.SwitchEnums",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExceptionTest<Basics>",
+            "request": "launch",
+            "mainClass": "exceptionHandling.ExceptionTest",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HandlingOfUncheckedExceptions<Basics>",
+            "request": "launch",
+            "mainClass": "exceptionHandling.HandlingOfUncheckedExceptions",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Outer<Basics>",
+            "request": "launch",
+            "mainClass": "innerOuterClass.Outer",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Outside1<Basics>",
+            "request": "launch",
+            "mainClass": "innerOuterClass.Outside1",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtendedOuter<Basics>",
+            "request": "launch",
+            "mainClass": "innerOuterClassdata.ExtendedOuter",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ComparableDemo<Basics>",
+            "request": "launch",
+            "mainClass": "interfaces.ComparableDemo",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Dog<Basics>(2)",
+            "request": "launch",
+            "mainClass": "interfaces.Dog",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtendTest<Basics>",
+            "request": "launch",
+            "mainClass": "interfaces.ExtendTest",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GeneralizedSelectionSort<Basics>",
+            "request": "launch",
+            "mainClass": "interfaces.GeneralizedSelectionSort",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Pomeranian<Basics>(1)",
+            "request": "launch",
+            "mainClass": "interfaces.Pomeranian",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Basics>(2)",
+            "request": "launch",
+            "mainClass": "interfaces.Test",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GroceryList<Basics>",
+            "request": "launch",
+            "mainClass": "linkedLists.GroceryList",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-InvalidIntException<Basics>",
+            "request": "launch",
+            "mainClass": "misc.InvalidIntException",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ZeroIntException<Basics>",
+            "request": "launch",
+            "mainClass": "misc.ZeroIntException",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Child<Basics>(1)",
+            "request": "launch",
+            "mainClass": "overridingMethods.Child",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RedefiningEquals<Basics>",
+            "request": "launch",
+            "mainClass": "overridingMethods.RedefiningEquals",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RetrievingMembers<Basics>",
+            "request": "launch",
+            "mainClass": "overridingMethods.RetrievingMembers",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ToStringWithSysOutPrint<Basics>(1)",
+            "request": "launch",
+            "mainClass": "overridingMethods.ToStringWithSysOutPrint",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Basics<Basics>",
+            "request": "launch",
+            "mainClass": "recursive.Basics",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SearchForFile<Basics>",
+            "request": "launch",
+            "mainClass": "recursive.SearchForFile",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringPermutations<Basics>",
+            "request": "launch",
+            "mainClass": "recursive.stringPermutations.StringPermutations",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ScanTextFileForHighestNb<Basics>",
+            "request": "launch",
+            "mainClass": "streams.ScanTextFileForHighestNb",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ScannerPrintWriter<Basics>",
+            "request": "launch",
+            "mainClass": "streams.ScannerPrintWriter",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SystemClass<Basics>",
+            "request": "launch",
+            "mainClass": "streams.SystemClass",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TextIntegerScanner<Basics>",
+            "request": "launch",
+            "mainClass": "streams.TextIntegerScanner",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingFile<Basics>",
+            "request": "launch",
+            "mainClass": "streams.UsingFile",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuffWriterTest<Basics>",
+            "request": "launch",
+            "mainClass": "streams.binaryStreams.BuffWriterTest",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReadDouble<Basics>",
+            "request": "launch",
+            "mainClass": "streams.binaryStreams.ReadDouble",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WriteDouble<Basics>",
+            "request": "launch",
+            "mainClass": "streams.binaryStreams.WriteDouble",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WriteObjectSerializable<Basics>",
+            "request": "launch",
+            "mainClass": "streams.binaryStreams.WriteObjectSerializable",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuffReadChar<Basics>",
+            "request": "launch",
+            "mainClass": "streams.buffered.BuffReadChar",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuffReadLine<Basics>",
+            "request": "launch",
+            "mainClass": "streams.buffered.BuffReadLine",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuffReadbyCharacter<Basics>",
+            "request": "launch",
+            "mainClass": "streams.buffered.BuffReadbyCharacter",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BuffReadbyLine<Basics>",
+            "request": "launch",
+            "mainClass": "streams.buffered.BuffReadbyLine",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<Basics>",
+            "request": "launch",
+            "mainClass": "streams.test",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Stringtokenizing<Basics>",
+            "request": "launch",
+            "mainClass": "strings.Stringtokenizing",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-basics<Basics>",
+            "request": "launch",
+            "mainClass": "strings.basics",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Child<Basics>(2)",
+            "request": "launch",
+            "mainClass": "superOrThis.Child",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Basics>(3)",
+            "request": "launch",
+            "mainClass": "test.Test",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-driver<Basics>",
+            "request": "launch",
+            "mainClass": "test.driver",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CastingObj<Basics>",
+            "request": "launch",
+            "mainClass": "upcastOrDowncast.CastingObj",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Chocobo<Basics>",
+            "request": "launch",
+            "mainClass": "upcastOrDowncast.Chocobo",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Driver<Basics>",
+            "request": "launch",
+            "mainClass": "usingAbstract.Driver",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UsingJavaDoc<Basics>",
+            "request": "launch",
+            "mainClass": "usingJavaDoc.UsingJavaDoc",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Child<Basics>(3)",
+            "request": "launch",
+            "mainClass": "visibilityInheritance.Child",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Parent<Basics>(1)",
+            "request": "launch",
+            "mainClass": "visibilityInheritance.Parent",
+            "projectName": "Basics"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinarySearchTree<DataStructures>",
+            "request": "launch",
+            "mainClass": "binary_tree.BinarySearchTree",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GenericMaxHeap<DataStructures>",
+            "request": "launch",
+            "mainClass": "heaps.GenericMaxHeap",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MaxHeap<DataStructures>",
+            "request": "launch",
+            "mainClass": "heaps.MaxHeap",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-selectionSort<DataStructures>",
+            "request": "launch",
+            "mainClass": "inplaceSorting.selectionSort",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<DataStructures>",
+            "request": "launch",
+            "mainClass": "lists.Main",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyArrayList<DataStructures>",
+            "request": "launch",
+            "mainClass": "lists.MyArrayList",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyLinkedList<DataStructures>",
+            "request": "launch",
+            "mainClass": "lists.MyLinkedList",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-mergeSort<DataStructures>",
+            "request": "launch",
+            "mainClass": "outofplaceSorting.mergeSort",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ArrayQueue<DataStructures>",
+            "request": "launch",
+            "mainClass": "queues.ArrayQueue",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-main<DataStructures>",
+            "request": "launch",
+            "mainClass": "queues.main",
+            "projectName": "DataStructures"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OpenPrintEmailAttachment<NewSelenium>",
+            "request": "launch",
+            "mainClass": "selenium.OpenPrintEmailAttachment",
+            "projectName": "NewSelenium"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-YoutubeMp3Script<NewSelenium>",
+            "request": "launch",
+            "mainClass": "utubemp3.YoutubeMp3Script",
+            "projectName": "NewSelenium"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-driver<design_patterns>",
+            "request": "launch",
+            "mainClass": "WeaponSlot.copy.driver",
+            "projectName": "design_patterns"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WeatherstationDriver<design_patterns>",
+            "request": "launch",
+            "mainClass": "customObserver.WeatherstationDriver",
+            "projectName": "design_patterns"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MiniDuckSimulator<design_patterns>",
+            "request": "launch",
+            "mainClass": "duck.MiniDuckSimulator",
+            "projectName": "design_patterns"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WeatherstationDriver<design_patterns>(1)",
+            "request": "launch",
+            "mainClass": "javaObserver.WeatherstationDriver",
+            "projectName": "design_patterns"
+        }
+    ]
+}

@@ -75,6 +75,9 @@ public class MyArrayList<E> implements List<E> {
        System.out.println(listA.indexLastElement);
        listA.printArray();
        
+       listA.clear();
+       listA.printArray();
+       System.out.print(listA.size);
     }
     
     public void printArray() {

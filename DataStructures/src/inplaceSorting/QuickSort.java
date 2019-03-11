@@ -1,4 +1,4 @@
-package outofplaceSorting;
+package inplaceSorting;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,8 +24,8 @@ public class QuickSort {
        if(start<end) {
            int partitionInd=partition(arr,start,end);
            
-           quickSort(arr,start,partitionInd-1); //recursive call for left of partition
-           quickSort(arr,partitionInd+1,end);   //recursive call for right of partition
+           quickSort(arr,start,partitionInd-1); //recursive call for partitioning of left side of partitionIndex
+           quickSort(arr,partitionInd+1,end);   //recursive call for partitioning of right side of partitionIndex
        }
    }
     
@@ -45,14 +45,16 @@ public class QuickSort {
         System.out.println(); 
     } 
   
-    // Driver program 
+    
     public static void main(String args[]) 
     { 
-        int arr[] = {7,2,1,6,8,5,3,4}; 
+        int arr[] = {4,5,2,1,3}; 
         int n = arr.length; 
   
-        
+        partition(arr,0,arr.length-1);
+       System.out.print("first round partition\n"); printArray(arr);
         quickSort(arr,0,arr.length-1); 
+  System.out.println();
   
         System.out.println("sorted array"); 
         printArray(arr); 

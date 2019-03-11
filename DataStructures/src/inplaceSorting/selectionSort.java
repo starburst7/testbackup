@@ -5,14 +5,21 @@ import java.util.Arrays;
 public class selectionSort {
 
     
-    public static int[] sort(int[] arr,int m, int n) {
+    public static void sort(int[] arr,int n) {
+        int indexLargest=0;
+        if(n==1) return;
+        
+        for(int i=1;i<=n-1;i++) {
+            if(arr[i]>arr[indexLargest])
+                indexLargest=i;
+        }
+        swap(arr,indexLargest,n-1);
+        
+        sort(arr,n-1);
+        
         
     }
-    public static boolean compare(int[] a,int i, int j) {
-        
-        return (a[i]>a[j]);
-           
-    }
+ 
     
     public static void swap(int[] a,int m,int n) {
         
@@ -24,9 +31,10 @@ public class selectionSort {
     
     public static void main(String[] args) {
 
-        int[]a = {9,5,7,20,10};
+        int[]a = {12,5,7,2,8};
         
-        System.out.print(Arrays.toString(sort(a,0,1)));
+        sort(a,a.length);
+        System.out.print(Arrays.toString(a));
 
     }
 

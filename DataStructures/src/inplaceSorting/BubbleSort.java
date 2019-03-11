@@ -26,7 +26,7 @@ public static void sort(int[] array,int n) {
     
     public static void main(String[] args) {
         
-        int[] array = {20,-3,44,20,-3 };
+        int[] array = {22,30,10,15,3,30,10,15};
 
 sort(array,array.length);
 

@@ -57,6 +57,32 @@ public class BinarySearchTree {
         if(root!=null)
             root.traversePreOrder();
     }
+    
+    public void traverseLevelOrder() {
+        
+       if(root!=null) {
+           
+           Queue<TreeNode> qu= new LinkedList<TreeNode>();
+           
+           qu.add(root);
+           
+          while( !qu.isEmpty()) {
+             
+              //remove Node from queue processing
+              TreeNode temp=qu.poll();
+              System.out.print(temp.getData()+", ");
+              
+                 //level order processing:  Does it have neighbor/children Nodes? If so, add to queue              
+                  if(temp.getLeftChild() !=null)
+                     qu.add(temp.getLeftChild() );
+              
+                  if(temp.getRightChild() !=null)
+                     qu.add(temp.getRightChild());
+          }
+           
+           
+       }
+    }
  
 
     public TreeNode getInorderSuccessorOfRightSubTree(TreeNode a) {
@@ -64,6 +90,8 @@ public class BinarySearchTree {
        return a.getInorderSuccessor();
         
     }
+    
+
 
 
     
@@ -73,15 +101,15 @@ public class BinarySearchTree {
        
         BinarySearchTree tree = new BinarySearchTree();
         
-        tree.insert(2);
-        tree.insert(4);
-        tree.insert(6);
-        tree.insert(8);
-        tree.insert(10); 
-        tree.insert(12); 
-        tree.insert(14); 
-        tree.insert(16);
-        tree.insert(18);
+        tree.insert(25);
+        tree.insert(20);
+        tree.insert(27);
+        tree.insert(15);
+        tree.insert(22); 
+        tree.insert(26); 
+        tree.insert(30); 
+        tree.insert(29);
+        tree.insert(32);
       
          
         
@@ -100,6 +128,7 @@ public class BinarySearchTree {
         System.out.println();
         
         System.out.println("Level order traversal: ");
+        tree.traverseLevelOrder();
         
         System.out.println();
         

@@ -1,5 +1,8 @@
 package binary_tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TreeNode {
 
     private int data;
@@ -122,6 +125,12 @@ public class TreeNode {
            leftChild.traversePreOrder();  //recursively go down the tree on left side
        if(rightChild!=null)
            rightChild.traversePreOrder();
+       
+   }
+   
+   public void traverseLevelOrder() {
+       
+     
        
    }
          

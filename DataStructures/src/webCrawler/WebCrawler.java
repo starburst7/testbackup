@@ -17,7 +17,7 @@ public class WebCrawler {
     
     private String readURL(String temp) {
         
-        return null;
+        
     }
     
     public void discoverWeb(String root) {

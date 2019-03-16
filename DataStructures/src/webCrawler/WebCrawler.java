@@ -14,6 +14,12 @@ public class WebCrawler {
         this.queue=new LinkedList<String>();
         this.discoveredWebsitesList=new ArrayList<String>();
     }
+    
+    private String readURL(String temp) {
+        
+        return null;
+    }
+    
     public void discoverWeb(String root) {
         this.queue.add(root);
         this.discoveredWebsitesList.add(root);
@@ -25,6 +31,7 @@ public class WebCrawler {
         }
     }
     
+   
     public static void main(String[] args) {
    
     }
